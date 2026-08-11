@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "weft-tasks",
+  "version": "0.1.0",
+  "description": "Turn a vague request into a task someone can finish and verify, put it on your Weft board, and close it on a named artifact instead of a claim. Bundles the Weft MCP server.",
+  "author": {
+    "name": "Andrei Finogeev",
+    "email": "support@letsweft.com"
+  },
+  "homepage": "https://letsweft.com",
+  "repository": "https://github.com/AndreiFinogeev/weft-tasks",
+  "license": "MIT",
+  "keywords": ["tasks", "planning", "scrumban", "kanban", "sprints", "productivity"],
+  "skills": ["./"]
+}
