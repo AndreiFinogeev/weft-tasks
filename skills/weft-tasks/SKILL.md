@@ -202,6 +202,51 @@ discussing; check the board before pulling work, because a card already in Doing
 may be running in another client; never tell the user something is done without
 calling `complete_task`.
 
+### Give the receipt what it needs
+
+`complete_task` takes more than a sentence, and each field earns its place:
+
+- `artifacts` — what a person can check without taking your word for it: a URL,
+  a commit, a file hash, a message id. One real artifact beats three adjectives.
+- `claims` — what you assert you did. Claims, not verdicts: the server does not
+  treat them as verified, and neither should you.
+- `notDone` — what you did NOT do, said out loud. This is the field that keeps a
+  board honest, and the one most agents skip.
+- `unknowns` — what you are unsure about, while you still remember it.
+- `learnings` — anything the next run on this board should know, as
+  `{trigger, content}`: the trigger is WHEN it should come back to mind, not a
+  restatement of the content.
+
+### Make it checkable by machine where you can
+
+`create_task` accepts a `verification` plan — machine-runnable checks the SERVER
+re-runs when the task is completed, before it moves to Done. An `http` check
+that fetches a URL and looks for a phrase, a `citation` check that a quote
+really appears on a page, a `string_check` against your own summary or
+artifacts. When every blocking check passes, the completion comes back marked
+"verified, not just reported" — a stronger claim than any wording you could
+choose yourself.
+
+Use `human_checklist` for what only a person can judge, and never in place of a
+machine check that was possible.
+
+### When only the person can decide
+
+For anything irreversible — money, publishing outward, production, legal — or a
+real fork with no reasonable default, call `request_input` instead of guessing.
+Give `options` whenever the answer is a choice: a question with alternatives
+gets read, a yes/no gets rubber-stamped.
+
+Then put the question to the user the way YOUR client asks best, and bring the
+answer back with `submit_answer`. If nobody is in front of you, stop: your claim
+is kept, the question waits in their Inbox on web or phone, and the answer
+reaches you at your next `start_task`, `get_my_work` or `submit_answer`. If they
+tell you they already answered in the app, call `request_input` again with the
+same arguments — it returns their answer with fresh credentials to continue.
+
+Never answer on their behalf. An answer you invented is worse than no answer,
+because it looks exactly like theirs.
+
 ## When Weft isn't connected
 
 This skill loads in clients with no Weft connection, where a planner is still
