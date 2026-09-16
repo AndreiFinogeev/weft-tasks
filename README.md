@@ -1,7 +1,7 @@
 # Weft tasks — an Agent Skill
 
 Teaches any AI agent to turn a vague request into a task that can actually be
-finished and verified, put it on your [Weft](https://letsweft.com) board, and
+finished and verified, put it on your [Weft](https://letsweft.com/?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen) board, and
 close it on a named artifact instead of a claim.
 
 Works for the work a founder actually has — a landing page, an investor update,
@@ -46,8 +46,8 @@ https://letsweft.com/api/mcp
 ```
 
 Streamable HTTP, OAuth 2.1, no API keys — a browser window opens on first use.
-Per-client instructions: [letsweft.com/integrations](https://letsweft.com/integrations).
-A free account takes a minute: [letsweft.com/sign-up](https://letsweft.com/sign-up).
+Per-client instructions: [letsweft.com/integrations](https://letsweft.com/integrations?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen).
+A free account takes a minute: [letsweft.com/sign-up](https://letsweft.com/sign-up?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen).
 
 Board mechanics — columns, sprints, projects, quota, trash — come from the MCP
 server itself, so this skill never restates them and cannot drift out of sync
@@ -66,6 +66,6 @@ with them.
 
 ## Support
 
-- Docs: [letsweft.com/docs](https://letsweft.com/docs)
+- Docs: [letsweft.com/docs](https://letsweft.com/docs?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen)
 - Email: support@letsweft.com
-- Privacy: [letsweft.com/privacy](https://letsweft.com/privacy)
+- Privacy: [letsweft.com/privacy](https://letsweft.com/privacy?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen)
