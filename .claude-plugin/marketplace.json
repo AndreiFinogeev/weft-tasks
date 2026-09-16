@@ -7,14 +7,15 @@
   },
   "metadata": {
     "description": "Weft — task planning and a Scrumban board your AI can drive.",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
   "plugins": [
     {
       "name": "weft-tasks",
+      "category": "productivity",
       "source": "./",
       "description": "Turn a vague request into a task someone can finish and verify, put it on your Weft board, and close it on a named artifact instead of a claim. Bundles the Weft MCP server.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": { "name": "Andrei Finogeev", "email": "support@letsweft.com" },
       "homepage": "https://letsweft.com",
       "license": "MIT",
