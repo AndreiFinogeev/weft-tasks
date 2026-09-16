@@ -14,7 +14,7 @@ there is nothing to clone and no path to know:
 
 ```bash
 claude plugin marketplace add AndreiFinogeev/weft-tasks
-claude plugin install weft-tasks@weft
+claude plugin install weft@weft
 ```
 
 That installs both halves: the skill, and the Weft MCP server it writes to. On

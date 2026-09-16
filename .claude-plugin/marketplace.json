@@ -2,15 +2,18 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "weft",
   "description": "Weft — task planning and a Scrumban board your AI can drive.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "owner": {
     "name": "Andrei Finogeev",
     "email": "support@letsweft.com",
     "url": "https://letsweft.com"
   },
+  "renames": {
+    "weft-tasks": "weft"
+  },
   "plugins": [
     {
-      "name": "weft-tasks",
+      "name": "weft",
       "category": "productivity",
       "source": "./",
       "description": "Turn a vague request into a task someone can finish and verify, put it on your Weft board, and close it on a named artifact instead of a claim. Bundles the Weft MCP server.",
