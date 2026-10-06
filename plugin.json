@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "weft",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Weft is a Scrumban task manager for solo founders and small teams: one board, your sprints, and the AI you already use driving it. Bundles the Weft MCP server and a planning skill that turns a vague request into a task someone can finish and verify.",
   "author": {
     "name": "Andrei Finogeev",

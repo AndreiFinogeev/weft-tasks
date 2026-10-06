@@ -1,15 +1,33 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "weft",
-  "version": "0.4.0",
-  "description": "Turn a vague request into a task someone can finish and verify, put it on your Weft board, and close it on a named artifact instead of a claim. Bundles the Weft MCP server.",
+  "displayName": "Weft",
+  "version": "0.4.1",
+  "description": "Weft is a Scrumban task manager for solo founders and small teams. Claude reads your board, takes a task, does the work and writes back what it did. Bundles the Weft MCP server and a planning skill.",
   "author": {
     "name": "Andrei Finogeev",
-    "email": "support@letsweft.com"
+    "email": "support@letsweft.com",
+    "url": "https://letsweft.com"
   },
   "homepage": "https://letsweft.com",
   "repository": "https://github.com/AndreiFinogeev/weft-tasks",
   "license": "MIT",
-  "keywords": ["tasks", "planning", "scrumban", "kanban", "sprints", "productivity"],
-  "skills": ["./"]
+  "keywords": [
+    "weft",
+    "tasks",
+    "task-manager",
+    "planning",
+    "scrumban",
+    "kanban",
+    "sprints",
+    "productivity"
+  ],
+  "skills": [
+    "./"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://letsweft.com/docs",
+  "supportUrl": "https://letsweft.com/support",
+  "privacyPolicyUrl": "https://letsweft.com/privacy",
+  "termsOfServiceUrl": "https://letsweft.com/terms"
 }
