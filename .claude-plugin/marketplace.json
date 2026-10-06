@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "weft",
   "description": "Weft — task planning and a Scrumban board your AI can drive.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "owner": {
     "name": "Andrei Finogeev",
     "email": "support@letsweft.com",

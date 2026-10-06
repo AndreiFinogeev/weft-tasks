@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Square, no rounded corners — ChatGPT host applies its own circular crop. -->
+  <rect width="1024" height="1024" fill="#F5EFE4"/>
+  <g stroke-linecap="round" fill="none">
+    <!-- Warps (vertical, taupe) — sampled from apps/web/brand/play-store/icon-512.png ×2 -->
+    <line x1="350" y1="237" x2="350" y2="785" stroke="#AFA99E" stroke-width="46"/>
+    <line x1="672" y1="237" x2="672" y2="785" stroke="#AFA99E" stroke-width="46"/>
+    <!-- Wefts (horizontal, orange) — woven stagger: left, right, left -->
+    <line x1="236" y1="373" x2="648" y2="373" stroke="#E06533" stroke-width="56"/>
+    <line x1="374" y1="511" x2="786" y2="511" stroke="#E06533" stroke-width="56"/>
+    <line x1="236" y1="649" x2="648" y2="649" stroke="#E06533" stroke-width="56"/>
+  </g>
+</svg>

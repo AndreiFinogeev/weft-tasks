@@ -20,6 +20,16 @@ claude plugin install weft@weft
 That installs both halves: the skill, and the Weft MCP server it writes to. On
 first use a browser window opens to sign in.
 
+**Cursor, Kiro, GitHub Copilot and Codex.** The repository is also an
+[Agent Plugins 1.0](https://agent-plugins.org) package (`plugin.json` and
+`mcp.json` at the root), the format those clients install from. Once the
+marketplace listings are live, install Weft from each client's plugin browser.
+Until then, the Copilot CLI and VS Code can install it straight from GitHub:
+
+```bash
+copilot plugin install AndreiFinogeev/weft-tasks
+```
+
 **Any other client that reads the [Agent Skill](https://agentskills.io) format**
 — Codex, Cursor, VS Code, Copilot, Goose, OpenCode, OpenHands, Amp, Kiro,
 Factory, Letta, Junie, Roo Code — point it at `skills/weft-tasks/` in this repo,
@@ -57,9 +67,12 @@ with them.
 
 | Path | What it is |
 |---|---|
+| `plugin.json` | Agent Plugins 1.0 manifest — what Cursor, Kiro, Copilot and the OpenAI plugin directory read |
+| `mcp.json` | The Weft MCP server, in the Agent Plugins format |
+| `assets/` | Icons, light and dark |
 | `.claude-plugin/plugin.json` | Plugin manifest — what `claude plugin install` reads |
 | `.claude-plugin/marketplace.json` | Makes this repo installable directly, with no separate marketplace |
-| `.mcp.json` | Ships the Weft MCP server with the plugin |
+| `.mcp.json` | Ships the Weft MCP server with the plugin, in Claude Code's format |
 | `skills/weft-tasks/SKILL.md` | The skill. Name and description are always in context; the body loads only when it triggers |
 | `skills/weft-tasks/references/examples.md` | Loaded only if the agent opens it — worked non-code examples |
 | `evals/` | Runnable behaviour tests (`claude plugin eval`), and a readable statement of what the skill is supposed to do |

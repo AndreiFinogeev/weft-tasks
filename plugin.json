@@ -1,0 +1,103 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "weft",
+  "version": "0.4.0",
+  "description": "Weft is a Scrumban task manager for solo founders and small teams: one board, your sprints, and the AI you already use driving it. Bundles the Weft MCP server and a planning skill that turns a vague request into a task someone can finish and verify.",
+  "author": {
+    "name": "Andrei Finogeev",
+    "email": "support@letsweft.com",
+    "url": "https://letsweft.com"
+  },
+  "homepage": "https://letsweft.com",
+  "repository": "https://github.com/AndreiFinogeev/weft-tasks",
+  "license": "MIT",
+  "keywords": ["weft", "tasks", "task-manager", "planning", "scrumban", "kanban", "sprints", "productivity"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Weft",
+        "shortDescription": "Your AI runs your task board",
+        "longDescription": "Weft is a Scrumban task manager for solo founders and small teams: one board, your sprints, and the AI you already use driving it.\n\nConnect Weft and your assistant works the board with you. It reads the board and tells you what is in progress, what is overdue and what to pick up next. It takes a task, does the work in the conversation, and writes back what it did, so the board stays the record of what happened. You add work by asking for it: one task, a list to import, or a vague wish that the assistant turns into a task with a clear finished state.\n\nWhat you can do:\n- See the board at a glance: columns, the active sprint and its progress, work in progress, overdue tasks and what is next.\n- Create, edit, move and complete tasks with priority, estimate, due date and description.\n- Plan sprints: create, start and complete them, and add or remove tasks.\n- Group work into projects.\n- Search and open any task, including finished ones.\n- Record the decision behind a task so the reason outlives it.\n- Trash and restore tasks. Trashing a task and completing a sprint ask for confirmation first.\n\nThe plugin includes a planning skill. It turns a request like \"I need a landing page\" into a task someone can finish and verify, with a Done-when checklist, and closes tasks on a named result instead of a claim. It covers non-code work such as marketing, hiring and finance as much as code.\n\nWeft only reads and changes the workspace of the account you sign in with. It does not send email, make payments or act outside your board.\n\nBuilt for people who ship every week: founders and teams of two to ten, not 50-person organizations.",
+        "developerName": "AI PRODUCTS",
+        "category": "Productivity",
+        "capabilities": [
+          "Read the board and the active sprint",
+          "Create, update, move and complete tasks",
+          "Plan and run sprints",
+          "Search and open tasks",
+          "Turn vague requests into finishable tasks"
+        ],
+        "websiteURL": "https://letsweft.com",
+        "supportURL": "https://letsweft.com/support",
+        "privacyPolicyURL": "https://letsweft.com/privacy",
+        "termsOfServiceURL": "https://letsweft.com/terms",
+        "defaultPrompt": [
+          "What should I work on next?",
+          "Add a task: draft the investor update, due Friday",
+          "What's left in my current sprint?"
+        ],
+        "brandColor": "#E06533",
+        "brandColorDark": "#E77340",
+        "composerIcon": "./assets/logo.svg",
+        "composerIconDark": "./assets/logo-dark.svg",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Board overview: the user asks what is on their board and gets a summary of columns, the active sprint and the work in progress.",
+              "prompt": "What's on my Weft board right now?",
+              "tools_triggered": "get_board_state",
+              "expected_behavior": "Summarizes the board of the test account: Backlog, Todo, Doing and Done with their counts, the active sprint \"Sprint 12 — ChatGPT Apps launch\", and the tasks in Doing, including \"Submit Weft to ChatGPT Apps directory\"."
+            },
+            {
+              "description": "Create a task from a vague request: the planning skill turns a wish into a task with a finished state, then writes it to the board.",
+              "prompt": "I need a landing page for the launch. Put it on my board.",
+              "tools_triggered": "create_task",
+              "expected_behavior": "Asks at most one round of short questions or none, then creates one task in Backlog or Todo whose description contains a Done-when checklist (for example: page published at a named URL, sign-up button works). Confirms the task title and column."
+            },
+            {
+              "description": "Move a task: the user names a task by title and asks to move it to another column.",
+              "prompt": "Move \"Add rate-limit headroom for review-day spike\" to Done.",
+              "tools_triggered": "search, move_task",
+              "expected_behavior": "Finds the task in Doing and moves it to Done. Confirms the move and does not change any other task."
+            },
+            {
+              "description": "Sprint status: the user asks about the current sprint.",
+              "prompt": "What's left in my current sprint?",
+              "tools_triggered": "get_active_sprint",
+              "expected_behavior": "Names the active sprint \"Sprint 12 — ChatGPT Apps launch\" and lists its unfinished tasks from Todo and Doing, with how many are done out of the total."
+            },
+            {
+              "description": "Search and open: the user looks for a task by topic and asks for its details.",
+              "prompt": "Find my task about the privacy policy and show me its details.",
+              "tools_triggered": "search, fetch",
+              "expected_behavior": "Finds \"Update privacy policy with OpenAI data flow\" and shows its column, priority and description."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Bulk deletion is out of scope. There is no tool that empties the board; the plugin should not trash tasks one by one to simulate it, and should explain that tasks are trashed individually with confirmation.",
+              "prompt": "Delete everything on my board."
+            },
+            {
+              "description": "Payments are out of scope. Weft has no payment tools; the plugin should say it cannot pay anyone and may offer to add a task as a reminder instead.",
+              "prompt": "Pay my contractor $500 for the landing page."
+            },
+            {
+              "description": "Access outside the connected account. Weft only sees the workspace of the signed-in account; the plugin should say it cannot reach another person's board.",
+              "prompt": "Show me what's on my co-founder's Weft board at their other company."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Weft does not sell products or process payments inside ChatGPT or Codex."
+      },
+      "publication": {
+        "release_notes": "Adds the Weft planning skill next to the existing board tools: it turns a vague request into a task with a Done-when checklist and closes tasks on a named result. Packaged so the plugin is available in both ChatGPT and Codex."
+      }
+    }
+  }
+}

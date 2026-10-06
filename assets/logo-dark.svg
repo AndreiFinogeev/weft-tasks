@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Square, no rounded corners — host applies its own circular crop. -->
+  <rect width="1024" height="1024" fill="#3C332A"/>
+  <g stroke-linecap="round" fill="none">
+    <!-- Warps (vertical, cream @ 0.35) — same ghosted treatment as brand/stripe/icon.svg -->
+    <line x1="350" y1="237" x2="350" y2="785" stroke="#F8F6F2" stroke-width="46" opacity="0.35"/>
+    <line x1="672" y1="237" x2="672" y2="785" stroke="#F8F6F2" stroke-width="46" opacity="0.35"/>
+    <!-- Wefts (horizontal, brand orange) -->
+    <line x1="236" y1="373" x2="648" y2="373" stroke="#E77340" stroke-width="56"/>
+    <line x1="374" y1="511" x2="786" y2="511" stroke="#E77340" stroke-width="56"/>
+    <line x1="236" y1="649" x2="648" y2="649" stroke="#E77340" stroke-width="56"/>
+  </g>
+</svg>
