@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "weft",
-  "version": "0.4.1",
-  "description": "Weft is a Scrumban task manager for solo founders and small teams: one board, your sprints, and the AI you already use driving it. Bundles the Weft MCP server and a planning skill that turns a vague request into a task someone can finish and verify.",
+  "version": "0.4.2",
+  "description": "Weft is the AI task manager for solo founders and small teams. Tell your AI, and it runs your board. Bundles the Weft MCP server and a planning skill that turns a vague request into a task someone can finish and verify.",
   "author": {
     "name": "Andrei Finogeev",
     "email": "support@letsweft.com",
@@ -11,13 +11,22 @@
   "homepage": "https://letsweft.com",
   "repository": "https://github.com/AndreiFinogeev/weft-tasks",
   "license": "MIT",
-  "keywords": ["weft", "tasks", "task-manager", "planning", "scrumban", "kanban", "sprints", "productivity"],
+  "keywords": [
+    "weft",
+    "tasks",
+    "task-manager",
+    "planning",
+    "scrumban",
+    "kanban",
+    "sprints",
+    "productivity"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Weft",
         "shortDescription": "Your AI runs your task board",
-        "longDescription": "Weft is a Scrumban task manager for solo founders and small teams: one board, your sprints, and the AI you already use driving it.\n\nConnect Weft and your assistant works the board with you. It reads the board and tells you what is in progress, what is overdue and what to pick up next. It takes a task, does the work in the conversation, and writes back what it did, so the board stays the record of what happened. You add work by asking for it: one task, a list to import, or a vague wish that the assistant turns into a task with a clear finished state.\n\nWhat you can do:\n- See the board at a glance: columns, the active sprint and its progress, work in progress, overdue tasks and what is next.\n- Create, edit, move and complete tasks with priority, estimate, due date and description.\n- Plan sprints: create, start and complete them, and add or remove tasks.\n- Group work into projects.\n- Search and open any task, including finished ones.\n- Record the decision behind a task so the reason outlives it.\n- Trash and restore tasks. Trashing a task and completing a sprint ask for confirmation first.\n\nThe plugin includes a planning skill. It turns a request like \"I need a landing page\" into a task someone can finish and verify, with a Done-when checklist, and closes tasks on a named result instead of a claim. It covers non-code work such as marketing, hiring and finance as much as code.\n\nWeft only reads and changes the workspace of the account you sign in with. It does not send email, make payments or act outside your board.\n\nBuilt for people who ship every week: founders and teams of two to ten, not 50-person organizations.",
+        "longDescription": "Weft is the AI task manager for solo founders and small teams. Tell your AI, and it runs your board.\n\nConnect Weft and your assistant works the board with you. It reads the board and tells you what is in progress, what is overdue and what to pick up next. It takes a task, does the work in the conversation, and writes back what it did, so the board stays the record of what happened. You add work by asking for it: one task, a list to import, or a vague wish that the assistant turns into a task with a clear finished state.\n\nWhat you can do:\n- See the board at a glance: columns, the active sprint and its progress, work in progress, overdue tasks and what is next.\n- Create, edit, move and complete tasks with priority, estimate, due date and description.\n- Plan sprints: create, start and complete them, and add or remove tasks.\n- Group work into projects.\n- Search and open any task, including finished ones.\n- Record the decision behind a task so the reason outlives it.\n- Trash and restore tasks. Trashing a task and completing a sprint ask for confirmation first.\n\nThe plugin includes a planning skill. It turns a request like \"I need a landing page\" into a task someone can finish and verify, with a Done-when checklist, and closes tasks on a named result instead of a claim. It covers non-code work such as marketing, hiring and finance as much as code.\n\nWeft only reads and changes the workspace of the account you sign in with. It does not send email, make payments or act outside your board.\n\nBuilt for people who ship every week: founders and teams of two to ten, not 50-person organizations.",
         "developerName": "AI PRODUCTS",
         "category": "Productivity",
         "capabilities": [

@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "weft",
-  "description": "Weft — task planning and a Scrumban board your AI can drive.",
-  "version": "0.4.1",
+  "description": "Weft — the AI task manager for solo founders and small teams.",
+  "version": "0.4.2",
   "owner": {
     "name": "Andrei Finogeev",
     "email": "support@letsweft.com",
@@ -16,7 +16,7 @@
       "name": "weft",
       "category": "productivity",
       "source": "./",
-      "description": "Weft is a Scrumban task manager for solo founders and small teams. Claude reads your board, takes a task, does the work and writes back what it did. Bundles the Weft MCP server and a planning skill.",
+      "description": "Weft is the AI task manager for solo founders and small teams. Claude reads your board, takes a task, does the work and writes back what it did. Bundles the Weft MCP server and a planning skill.",
       "author": {
         "name": "Andrei Finogeev",
         "email": "support@letsweft.com"
