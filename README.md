@@ -24,10 +24,19 @@ first use a browser window opens to sign in.
 [Agent Plugins 1.0](https://agent-plugins.org) package (`plugin.json` and
 `mcp.json` at the root), the format those clients install from. Once the
 marketplace listings are live, install Weft from each client's plugin browser.
-Until then, the Copilot CLI and VS Code can install it straight from GitHub:
+Until then, the Copilot CLI can install it from this repository, which is its
+own marketplace there too:
 
 ```bash
-copilot plugin install AndreiFinogeev/weft-tasks
+copilot plugin marketplace add AndreiFinogeev/weft-tasks
+copilot plugin install weft@weft
+```
+
+Codex CLI, the same way:
+
+```bash
+codex plugin marketplace add AndreiFinogeev/weft-tasks
+codex plugin add weft@weft
 ```
 
 **Any other client that reads the [Agent Skill](https://agentskills.io) format**
