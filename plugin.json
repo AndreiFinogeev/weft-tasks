@@ -1,10 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "weft",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Weft is the AI task manager for solo founders and small teams. Tell your AI, and it runs your board. Bundles the Weft MCP server and a planning skill that turns a vague request into a task someone can finish and verify.",
   "author": {
-    "name": "Andrei Finogeev",
+    "name": "Weft",
     "email": "support@letsweft.com",
     "url": "https://letsweft.com"
   },
