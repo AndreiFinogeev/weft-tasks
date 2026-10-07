@@ -1,0 +1,29 @@
+{
+  "name": "weft",
+  "version": "0.4.3",
+  "description": "Weft is the AI task manager for solo founders and small teams. Tell your AI, and it runs your board. Bundles the Weft MCP server and a planning skill that turns a vague request into a task someone can finish and verify.",
+  "author": {
+    "name": "Andrei Finogeev",
+    "email": "support@letsweft.com"
+  },
+  "homepage": "https://letsweft.com",
+  "repository": "https://github.com/AndreiFinogeev/weft-tasks",
+  "license": "MIT",
+  "keywords": [
+    "weft",
+    "tasks",
+    "task-manager",
+    "planning",
+    "scrumban",
+    "kanban",
+    "sprints",
+    "productivity"
+  ],
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": {
+    "weft": {
+      "url": "https://letsweft.com/api/mcp"
+    }
+  }
+}

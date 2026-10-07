@@ -76,7 +76,8 @@ with them.
 
 | Path | What it is |
 |---|---|
-| `plugin.json` | Agent Plugins 1.0 manifest — what Cursor, Kiro, Copilot and the OpenAI plugin directory read |
+| `plugin.json` | Agent Plugins 1.0 manifest — what Kiro, Copilot and the OpenAI plugin directory read |
+| `.cursor-plugin/plugin.json` | Cursor Marketplace manifest — adds the logo, which the Agent Plugins format has no field for |
 | `mcp.json` | The Weft MCP server, in the Agent Plugins format |
 | `assets/` | Icons, light and dark |
 | `.claude-plugin/plugin.json` | Plugin manifest — what `claude plugin install` reads |

@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "weft",
   "description": "Weft — the AI task manager for solo founders and small teams.",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "owner": {
     "name": "Andrei Finogeev",
     "email": "support@letsweft.com",
