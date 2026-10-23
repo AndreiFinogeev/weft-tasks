@@ -39,8 +39,15 @@ codex plugin marketplace add AndreiFinogeev/weft-tasks
 codex plugin add weft@weft
 ```
 
+**Amp** — one command installs the skill and its MCP server (Amp reads
+`skills/weft-tasks/mcp.json` and asks you to sign in to Weft on first use):
+
+```bash
+amp skill add AndreiFinogeev/weft-tasks
+```
+
 **Any other client that reads the [Agent Skill](https://agentskills.io) format**
-— Codex, Cursor, VS Code, Copilot, Goose, OpenCode, OpenHands, Amp, Kiro,
+— Codex, Cursor, VS Code, Copilot, Goose, OpenCode, OpenHands, Kiro,
 Factory, Letta, Junie, Roo Code — point it at `skills/weft-tasks/` in this repo,
 or clone the whole thing into your skills directory:
 
@@ -64,7 +71,8 @@ hosted MCP server so tasks land where you can see them:
 https://letsweft.com/api/mcp
 ```
 
-Streamable HTTP, OAuth 2.1, no API keys — a browser window opens on first use.
+Streamable HTTP, OAuth 2.1 — a browser window opens on first use. Clients
+without OAuth can use a personal access token (Settings → Access tokens).
 Per-client instructions: [letsweft.com/integrations](https://letsweft.com/integrations?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen).
 A free account takes a minute: [letsweft.com/sign-up](https://letsweft.com/sign-up?utm_source=github-weft-tasks&utm_medium=repo&utm_campaign=evergreen).
 
@@ -84,6 +92,7 @@ with them.
 | `.claude-plugin/marketplace.json` | Makes this repo installable directly, with no separate marketplace |
 | `.mcp.json` | Ships the Weft MCP server with the plugin, in Claude Code's format |
 | `skills/weft-tasks/SKILL.md` | The skill. Name and description are always in context; the body loads only when it triggers |
+| `skills/weft-tasks/mcp.json` | The Weft MCP server in Amp's skill format — `amp skill add` connects it with the skill |
 | `skills/weft-tasks/references/examples.md` | Loaded only if the agent opens it — worked non-code examples |
 | `evals/` | Runnable behaviour tests (`claude plugin eval`), and a readable statement of what the skill is supposed to do |
 
